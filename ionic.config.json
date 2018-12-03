@@ -1,0 +1,7 @@
+{
+  "name": "groupeB",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
