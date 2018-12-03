@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Users List Page</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <h2>Users</h2>
+        <ion-grid>
+            <ion-row>
+                <ion-col>ID</ion-col>
+                <ion-col>Name</ion-col>
+                <ion-col>Email</ion-col>
+            </ion-row>
+
+            <ion-row text-wrap  *ngFor="let user of usersList">
+                <ion-col>{{ user.id }}</ion-col>
+                <ion-col>{{ user.name}}</ion-col>
+                <ion-col>{{ user.email }}</ion-col>
+
+
+            </ion-row>
+        </ion-grid>
+   
+   
+    
+  </ion-content>
+  

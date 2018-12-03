@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     GroupeB
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<h2>{{ message }}</h2>
+	<button ion-button (click)='presentAlert()'>Alert</button>
+
+	<form [formGroup]='operation' (ngSubmit)='calculate()'>
+		<ion-item>
+			<ion-label>N1</ion-label>
+			<ion-input type="text" formControlName="m1"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>N2</ion-label>
+			<ion-input type="text" formControlName="m2"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Op</ion-label>
+			<ion-select formControlName="op">
+				<ion-option value='+'>plus</ion-option>
+				<ion-option value='*'>fois</ion-option>
+				<ion-option value='-'>moin</ion-option>
+				<ion-option value='/'>Division</ion-option>
+			</ion-select>
+		</ion-item>
+		<button ion-button type="submit" [disabled]="!operation.valid">Calculate</button>
+
+	</form>
+
+</ion-content>
