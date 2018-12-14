@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { GbPage } from '../pages/gb/gb';
 import { UsersList } from '../pages/users/list/list';
+import { EditPage } from '../pages/edit/edit';
 import { Operator } from '../services/operator';
 import { UsersProvider } from '../services/users';
 
@@ -25,12 +26,13 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabsPage,
     GbPage,
-    UsersList
+    UsersList,
+    EditPage,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRo ot(MyApp)
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabsPage,
     GbPage,
-    UsersList
+    UsersList,
+    EditPage,
   ],
   providers: [
     StatusBar,

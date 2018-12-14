@@ -14,10 +14,11 @@
             </ion-row>
 
             <ion-row text-wrap  *ngFor="let user of usersList">
-                <ion-col>{{ user.id }}</ion-col>
-                <ion-col>{{ user.name }}</ion-col>
-                <ion-col>{{ user.email }}</ion-col>
-
+                <ion-col>{{ user._id }}</ion-col>
+                <ion-col>{{ user._source.name }}</ion-col>
+                <ion-col>{{ user._source.email }}</ion-col>
+                <ion-col><button ion-button [navPush]="pushPage" [navParams]="{'id': user._id}">Edit</button></ion-col>
+                
 
             </ion-row>
         </ion-grid>

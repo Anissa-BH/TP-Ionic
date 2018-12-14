@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>EDIT</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <form [formGroup]='userForm' (ngSubmit)='userFormSubmit()'>
+          <ion-item>
+              <ion-label>ID</ion-label>
+              <ion-input type="text" formControlName="id"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Name</ion-label>
+              <ion-input type="text" formControlName="name"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Email</ion-label>
+              <ion-input type="text" formControlName="email"></ion-input>
+          </ion-item>
+          <button ion-button type="submit" [disabled]="!userForm.valid">ADD</button>
+  
+      </form>
+  
+  </ion-content>
+  
