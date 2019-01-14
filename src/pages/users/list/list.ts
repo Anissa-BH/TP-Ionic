@@ -12,18 +12,15 @@ import { Page } from 'ionic-angular/umd/navigation/nav-util';
 export class UsersList {
 
     usersList: any;
-    //user: any;
     pushPage:Page;
 
   constructor(private users:  UsersProvider, public navParams: NavParams) {
-      
+      alert(localStorage.getItem('email'));
     this.users.all().subscribe((usersTable: any)=> 
       {
           this.usersList = usersTable.hits.hits;
           console.log(usersTable.hits.hits);
           this.pushPage =EditPage;
-
       });
-
   }
 }

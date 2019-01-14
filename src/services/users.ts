@@ -24,6 +24,15 @@ import { Page } from "ionic-angular/umd/navigation/nav-util";
             let url = '/epi/user/' + user.id;
             return this.http.post(url, {"name": user.name, "email": user.email}, {headers: this.header});
         }
+        
+        fillForm(id){
+            let url = '/epi/user/'+id;
+            return this.http.get(url, {headers: this.header});
+        }
+        login(user){
+            let url = '/epi/user/_search?q=email:'+ user.email;
+            return this.http.get(url, {headers: this.header}) 
+        }
     }
 
-// ici on change durl avec id 
+ 
